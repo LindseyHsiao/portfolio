@@ -1,6 +1,6 @@
 
 
-import {useState} from 'react';
+import { useState } from 'react';
 import Box from '@mui/material/Box';
 import FilledInput from '@mui/material/FilledInput';
 import FormControl from '@mui/material/FormControl';
@@ -17,16 +17,16 @@ import PropTypes from 'prop-types';
 
 export default function ComposedTextField() {
   const [formData, setFormData] = useState({
-    name:'',
-    email:'',
-    message:''
+    name: '',
+    email: '',
+    message: ''
   });
-  const handleSubmit=()=>{
+  const handleSubmit = () => {
     console.log(formData)
   }
 
   const handleChange = (event) => {
-    const{name, value}= event.target    
+    const { name, value } = event.target
     setFormData({
       ...formData,
       [name]: value,
@@ -34,60 +34,65 @@ export default function ComposedTextField() {
   };
 
   
+
   return (
-    <Box
-      component="form"
-      sx={{
-        display: 'flex',
-        alignItems: 'flex-start',
-        flexDirection: 'column',
-        p: 4,
-        m: 2,
-        bgcolor: 'background.paper',
-        borderRadius: 1,
-        gap: 1
+    <form  className='contactForm' target="_blank" action="https://formsubmit.co/lindsey350@aol.com" method="POST" >
+      {/* <Box
+        component="form"
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
 
-      }}
-      noValidate
-      autoComplete="off"
-    >
-    
-      <FormControl>
-        <InputLabel htmlFor="component-outlined">Name</InputLabel>
-        <OutlinedInput
-          id="component-outlined"
-          value={formData.name}
-          onChange={handleChange}
-          label="Name"
-          name='name'
-        />
-      </FormControl>
-      <FormControl>
-        <InputLabel htmlFor="component-outlined">Email</InputLabel>
-        <OutlinedInput
-          id="component-outlined"
-          value={formData.email}
-          onChange={handleChange}
-          label="Email"
-          type='email'
-          name='email'
-        />
-      </FormControl>
-      <FormControl>
-        <InputLabel htmlFor="component-outlined" fullWidth={true}>Message</InputLabel>
-        <OutlinedInput
-          id="component-outlined"
-          value={formData.message}
-          onChange={handleChange}
-          label="Message"
-          type='textarea'
-          name='message'
-          rows='5'
-        />
-      </FormControl>
-      
-      <Button sx={{ p: 2 }} onClick={handleSubmit} variant="contained">Submit</Button>
+          p: 2,
+          // m: 2,
+          bgcolor: 'background.paper',
+          borderRadius: 1,
+          gap: 1
 
-    </Box>
+        }}
+        noValidate
+        autoComplete="off"
+      > */}
+        <h1>Contact Form</h1>
+        <FormControl sx={{ width: '80%' }}>
+          <InputLabel htmlFor="component-outlined">Name</InputLabel>
+          <OutlinedInput
+            id="component-outlined"
+            value={formData.name}
+            onChange={handleChange}
+            label="Name"
+            name='name'
+          />
+        </FormControl>
+        <FormControl sx={{ width: '80%' }}>
+          <InputLabel htmlFor="component-outlined">Email</InputLabel>
+          <OutlinedInput
+            id="component-outlined"
+            value={formData.email}
+            onChange={handleChange}
+            label="Email"
+            type='email'
+            name='email'
+          />
+        </FormControl >
+        <FormControl sx={{ width: '80%' }}>
+          {/* <InputLabel htmlFor="component-outlined" fullWidth={true}>Message</InputLabel> */}
+          <TextField
+            id="component-outlined"
+            value={formData.message}
+            onChange={handleChange}
+            label="Message"
+            multiline
+            rows={4}
+            maxRows={6}
+            name='message'
+
+          />
+        </FormControl>
+
+        <Button sx={{ p: 2, width: '50%' }} variant="contained" type='submit' onClick={handleSubmit}>Submit</Button>
+      {/* </Box> */}
+    </form>
   );
 }

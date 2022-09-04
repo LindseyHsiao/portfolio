@@ -12,13 +12,15 @@ function App() {
   return (
 <BrowserRouter>
 <Navigation/>
-<Routes>
+
+<Routes >
   <Route exact path='/' element={<About/>}/>
   <Route path='/portfolio' element={<Portfolio/>}/>
   <Route path='/contact' element={<Contact/>}/>
   {/* <Route path='/resume' element={<Resume/>}/> */}
 </Routes>
-<Footer></Footer>
+
+<Footer/>
 </BrowserRouter>
   );
 }
