@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import Container from '@mui/material/Container';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -30,7 +29,7 @@ const ResponsiveAppBar = (props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Lindsey
       </Typography>
       <Divider />
       <List>
@@ -78,7 +77,7 @@ const ResponsiveAppBar = (props) => {
               <Button 
               key={page} 
               sx={{ color: '#fff' }}
-              href={page === 'About' ? '/' : page === 'Portfolio' ? '/portfolio' : page === 'Resume' ? '#' : '/contact'}
+              href={page === 'About' ? '/' : page === 'Portfolio' ? '/portfolio' : page === 'Resume' ? 'https://docs.google.com/document/d/e/2PACX-1vTY4OKltUSEGikShQnXyBDL-q3eDNGenCFYK5RS_UgfpWrjmh5ky_HQXdkaypVZqEgFJVLkUh1tqQ9G/pub' : '/contact'}
               >
                 {page}
               </Button>
