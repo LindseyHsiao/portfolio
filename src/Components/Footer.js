@@ -21,8 +21,8 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="GitHub"  href="https://github.com/LindseyHsiao" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></BottomNavigationAction>
-        <BottomNavigationAction label="LinkedIn"  ><i class="fa-brands fa-linkedin"></i></BottomNavigationAction>
+        <BottomNavigationAction label="GitHub" icon={<i class="fa-brands fa-github"></i>} href="https://github.com/LindseyHsiao" target="_blank" rel="noopener noreferrer"></BottomNavigationAction>
+        <BottomNavigationAction label="LinkedIn" icon={<i class="fa-brands fa-linkedin"></i>} />
       </BottomNavigation>
     </Box>
     

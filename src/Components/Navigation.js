@@ -57,9 +57,7 @@ const ResponsiveAppBar = (props) => {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <div></div>
-            <div></div>
-            <div></div>
+            <i class="fa-solid fa-bars"></i>
           </IconButton>
           <Typography
             variant="h6"
@@ -78,7 +76,7 @@ const ResponsiveAppBar = (props) => {
               <Button 
               key={page} 
               sx={{ color: '#fff' }}
-              href={page === 'About' ? '/' : page === 'Portfolio' ? '/portfolio' : page === 'Resume' ? 'https://docs.google.com/document/d/e/2PACX-1vTY4OKltUSEGikShQnXyBDL-q3eDNGenCFYK5RS_UgfpWrjmh5ky_HQXdkaypVZqEgFJVLkUh1tqQ9G/pub' : '/contact'}
+              href={page === 'About' ? '/' : page === 'Portfolio' ? '/portfolio' : page === 'Resume' ? 'https://docs.google.com/document/d/1UqudwhILvysr8vJx-uVIXbukq3p-zcaKipS9osWEVOc/edit?usp=sharing' : '/contact'}
               >
                 {page}
               </Button>
