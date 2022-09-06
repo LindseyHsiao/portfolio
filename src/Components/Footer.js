@@ -3,11 +3,7 @@ import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 
-import { positions } from '@mui/system';
 
-import Link from '@mui/material/Link';
-
-const preventDefault = (event) => event.preventDefault();
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
