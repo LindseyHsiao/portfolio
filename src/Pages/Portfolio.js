@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
 import runbuddy from '../images/runbuddy.png'
+import onespark from '../images/onespark.png'
 
 const preventDefault = (event) => event.preventDefault();
 
@@ -49,7 +50,25 @@ export default function ActionAreaCard() {
           </Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>2</Item>
+          <Item>
+            <Card sx={{ maxWidth: 345 }} variant="outlined">
+          <CardActionArea href="https://one-spark.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+            <CardMedia
+              component="img"
+              //height="200"
+              src={onespark}
+              alt="one spark screenshot"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                One Spark
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+              This application is a match game that improves memory skills through fun and practice with memorization. Once you log in, you can access games from a virety of categories to play at your leisure.               </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+          </Item>
         </Grid>
         <Grid item xs={4}>
           <Item>3</Item>
