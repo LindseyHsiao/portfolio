@@ -10,8 +10,9 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
 import runbuddy from '../images/runbuddy.png'
+import janjennings from '../images/janjennings.png'
 
-const preventDefault = (event) => event.preventDefault();
+// const preventDefault = (event) => event.preventDefault();
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#4D575D',
@@ -49,7 +50,26 @@ export default function ActionAreaCard() {
           </Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>2</Item>
+          <Item>
+          <Card sx={{ maxWidth: 345 }} variant="outlined">
+          <CardActionArea href="https://janjennings.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <CardMedia
+              component="img"
+              //height="200"
+              src={janjennings}
+              alt="runbuddy screenshot"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Jan Jennings- Harpist
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Application for sharing information, and booking clients.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+          </Item>
         </Grid>
         <Grid item xs={4}>
           <Item>3</Item>
