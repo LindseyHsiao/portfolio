@@ -16,7 +16,6 @@ function About() {
     return (
         <Box sx={{ flexGrow: 1 }} mt={3}>
             <Grid container spacing={2}>
-
                 <Grid xs={4}>
                     <Box
                         component="img"
