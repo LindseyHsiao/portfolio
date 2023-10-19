@@ -10,7 +10,9 @@ import Footer from './Components/Footer'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter
+    basename={import.meta.env.DEV ? '/': '/portfolio/'}
+    >
       <Navigation />
 
       <Routes >
