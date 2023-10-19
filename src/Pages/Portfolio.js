@@ -21,53 +21,79 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
+const projects = [
+  {
+    title: 'Run Buddy',
+    link: 'https://lindseyhsiao.github.io/run-buddy/',
+    img: runbuddy,
+    description: 'An interactive application for initiating realtionships with trainers at a local business.',
+    imgAlt: 'run buddy screenshot'
+  },
+  {
+    title: 'One Spark',
+    link: 'https://lindseyhsiao.github.io/run-buddy/',
+    img: onespark,
+    description: 'An interactive application for initiating realtionships with trainers at a local business.',
+    imgAlt: 'run buddy screenshot'
+  },
+  {
+    title: 'Run Buddy',
+    link: 'https://lindseyhsiao.github.io/run-buddy/',
+    img: runbuddy,
+    description: 'An interactive application for initiating realtionships with trainers at a local business.',
+    imgAlt: 'run buddy screenshot'
+  },
+]
 
 
 export default function ActionAreaCard() {
   return (
-    <Box sx={{ width: '95%'}}>
+    <Box sx={{ width: '95%' }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs={4}>
-          <Item>
-          <Card sx={{ maxWidth: 345 }} variant="outlined">
-          <CardActionArea href="https://lindseyhsiao.github.io/run-buddy/" target="_blank" rel="noopener noreferrer">
-            <CardMedia
-              component="img"
-              //height="200"
-              src={runbuddy}
-              alt="runbuddy screenshot"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Run Buddy
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                An interactive application for initiating realtionships with trainers at a local business.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-          </Item>
-        </Grid>
-        <Grid item xs={4}>
+        {projects.map((project, i)=> (
+           <Grid item xs={4}>
           <Item>
             <Card sx={{ maxWidth: 345 }} variant="outlined">
-          <CardActionArea href="https://one-spark.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-            <CardMedia
-              component="img"
-              //height="200"
-              src={onespark}
-              alt="one spark screenshot"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                One Spark
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-              This application is a match game that improves memory skills through fun and practice with memorization. Once you log in, you can access games from a virety of categories to play at your leisure.               </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+              <CardActionArea href={project.link} target="_blank" rel="noopener noreferrer">
+                <CardMedia
+                  component="img"
+                  height="200"
+                  src={project.img}
+                  alt={project.imgAlt}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {project.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {project.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Item>
+        </Grid>
+        ))}
+       
+        {/* <Grid item xs={4}>
+          <Item>
+            <Card sx={{ maxWidth: 345 }} variant="outlined">
+              <CardActionArea href="https://one-spark.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                <CardMedia
+                  component="img"
+                  //height="200"
+                  src={onespark}
+                  alt="one spark screenshot"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    One Spark
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    This application is a match game that improves memory skills through fun and practice with memorization. Once you log in, you can access games from a virety of categories to play at your leisure.               </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
           </Item>
         </Grid>
         <Grid item xs={4}>
@@ -78,36 +104,36 @@ export default function ActionAreaCard() {
         </Grid>
         <Grid item xs={4}>
           <Item>5</Item>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
-     
-      // <Grid xs={6}>
-        
-      // </Grid>
-    
 
-      // <Grid>
-      //   <Card sx={{ maxWidth: 345 }} variant="outlined">
-      //     <CardActionArea>
-      //       <CardMedia
-      //         component="img"
-      //         height="200"
-      //         src={runbuddy}
-      //         alt="runbuddy screenshot"
-      //       />
-      //       <CardContent>
-      //         <Typography gutterBottom variant="h5" component="div">
-      //           Run Buddy
-      //         </Typography>
-      //         <Typography variant="body2" color="text.secondary">
-      //           An interactive application for initiating realtionships with trainers at a local business.
-      //         </Typography>
-      //       </CardContent>
-      //     </CardActionArea>
-      //   </Card>
-      // </Grid>
-      // </Grid>
+    // <Grid xs={6}>
 
-      );
+    // </Grid>
+
+
+    // <Grid>
+    //   <Card sx={{ maxWidth: 345 }} variant="outlined">
+    //     <CardActionArea>
+    //       <CardMedia
+    //         component="img"
+    //         height="200"
+    //         src={runbuddy}
+    //         alt="runbuddy screenshot"
+    //       />
+    //       <CardContent>
+    //         <Typography gutterBottom variant="h5" component="div">
+    //           Run Buddy
+    //         </Typography>
+    //         <Typography variant="body2" color="text.secondary">
+    //           An interactive application for initiating realtionships with trainers at a local business.
+    //         </Typography>
+    //       </CardContent>
+    //     </CardActionArea>
+    //   </Card>
+    // </Grid>
+    // </Grid>
+
+  );
 }
